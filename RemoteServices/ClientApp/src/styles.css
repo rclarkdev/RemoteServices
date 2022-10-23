@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.container {
+    max-width: 100%;
+}
+
+.main-img-container {
+  margin-top: -380px;
+  height: 1100px;
+  overflow: hidden;
+}
+
+.get-quote-container {
+  text-align: center;
+  background: #e5e5e5;
+  padding: 50px;
+}
+
+.pp-sol {
+  font-family: 'Muli', sans-serif;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0.023em;
+  font-size: 48px !important;
+}
+
+.byi-life {
+
+}
+
+.get-quote-btn {
+  font-weight: 700;
+  font-size: 18px;
+  font-family: Quicksand, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  border: 1.3px solid;
+  padding: 10px 25px;
+  opacity: 0.5;
+}
