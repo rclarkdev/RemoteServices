@@ -1,0 +1,19 @@
+.contact-form-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form-wrapper .row {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.questions {
+  font-weight: 600;
+  font-size: 18px;
+}

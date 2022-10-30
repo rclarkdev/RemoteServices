@@ -5,6 +5,10 @@ a {
   color: #0366d6;
 }
 
+body {
+  margin: 0;
+}
+
 code {
   color: #e01a76;
 }
@@ -16,7 +20,10 @@ code {
 }
 
 .container {
-    max-width: 100%;
+  max-width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin-bottom: 90px;
 }
 
 .main-img-container {
@@ -31,24 +38,15 @@ code {
   padding: 50px;
 }
 
-.pp-sol {
-  font-family: 'Muli', sans-serif;
-  line-height: 1.2;
-  font-weight: 400;
-  letter-spacing: 0.023em;
-  font-size: 48px !important;
+.text-white {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-white-rgb),var(--bs-text-opacity)) !important;
 }
 
-.byi-life {
-
+.text-center {
+  text-align: center !important;
 }
 
-.get-quote-btn {
-  font-weight: 700;
-  font-size: 18px;
-  font-family: Quicksand, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  border: 1.3px solid;
-  padding: 10px 25px;
-  opacity: 0.5;
+.footer {
+  background-color: rgb(51, 51, 51);
 }

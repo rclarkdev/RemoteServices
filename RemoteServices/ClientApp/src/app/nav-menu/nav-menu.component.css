@@ -16,20 +16,24 @@ html {
 .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
-
+.nav-container {
+  padding: 0 50px !important;
+  margin: 0;
+}
 .navbar-brand {
   font-size: 24px;
   font-weight: 400;
-  color: rgb(169, 169, 169);
+  color: #a9a9a9;
   text-transform: uppercase;
-  letter-spacing: 0.091em;
-  font-family: Quicksand, sans-serif;
+  letter-spacing: .091em;
+  font-family: Quicksand,sans-serif;
   line-height: 1.2;
-  padding: 15px 0 15px 0;
+  padding: 15px 0;
 }
 
 .navbar-brand:hover {
   cursor: pointer;
+  color: #c4c0c0;
 }
 
 .navbar {
@@ -54,3 +58,7 @@ html {
   line-height: 1.2;
   padding: 15px 0 15px 0;
 }
+
+  .nav-link:hover {
+    color: #c4c0c0 !important;
+  }
