@@ -7,9 +7,8 @@ import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { ContactFormComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +16,7 @@ import { AboutComponent } from './about/about.component';
     NavMenuComponent,
     HomeComponent,
     CounterComponent,
-    FetchDataComponent,
-    ContactFormComponent,
+    ContactComponent,
     AboutComponent
   ],
   imports: [
@@ -28,9 +26,8 @@ import { AboutComponent } from './about/about.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'contact', component: ContactFormComponent },
-      { path: 'about', component: AboutComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'contact', component: ContactComponent },
+      { path: 'about', component: AboutComponent }
     ])
   ],
   providers: [],
