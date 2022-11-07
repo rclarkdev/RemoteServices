@@ -1,7 +1,8 @@
 .contact-form-wrapper {
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
   text-align: left;
+  font-size: larger;
 }
 
 .contact-form-wrapper .row {
@@ -16,4 +17,16 @@
 .questions {
   font-weight: 600;
   font-size: 18px;
+}
+
+.success-message {
+  text-align: center;
+  background: #d3ead3;
+  padding: 20px;
+}
+
+.failed-message {
+  background: #ffacac;
+  text-align: center;
+  padding: 20px;
 }
