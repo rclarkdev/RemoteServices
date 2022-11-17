@@ -1,0 +1,48 @@
+
+.life-cycle {
+  text-align: center;
+  background: #e3e3f7;
+  padding: 100px;
+}
+
+.tile {
+  width: 330px;
+  height: 472px;
+  display: inline-block;
+  border-radius: 20px;
+  vertical-align: top;
+  margin: 30px;
+}
+
+.img-wrap img {
+  width: 250px;
+  height: 250px;
+  border-radius: 25%;
+  margin-bottom: 30px;
+}
+
+.cycle-title {
+  font-size: x-large !important;
+  font: message-box;
+  letter-spacing: 1px;
+  font-weight: 700;
+  opacity: 80%;
+  text-align: left;
+  width: 330px;
+}
+
+  .cycle-title span {
+    font-size: xxx-large;
+    opacity: 50%;
+  }
+
+
+.tile p {
+  font-size: 16px;
+  font-family: Quicksand,sans-serif;
+  padding: 0 20px;
+  opacity: 80%;
+  letter-spacing: 1px;
+  line-height: 1.6em;
+  text-align: left;
+}

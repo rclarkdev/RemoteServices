@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ContactComponent } from './contact/contact.component';
     HomeComponent,
     CounterComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    LifeCycleComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -27,7 +29,8 @@ import { ContactComponent } from './contact/contact.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'contact', component: ContactComponent },
-      { path: 'about', component: AboutComponent }
+     // { path: 'about', component: AboutComponent },
+      { path: 'life-cycle', component: LifeCycleComponent }
     ])
   ],
   providers: [],
