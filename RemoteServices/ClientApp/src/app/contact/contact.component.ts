@@ -11,64 +11,6 @@ import { timeout } from 'rxjs';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
 })
-//export class ContactComponent implements OnInit {
-
-//  contactForm: FormGroup = new FormGroup({
-//    fromName: new FormControl(''),
-//    subject: new FormControl(''),
-//    emailBody: new FormControl(''),
-//    fromEmail: new FormControl(''),
-//  });
-
-//  submitted = false;
-
-
-
-//  constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string, private formBuilder: FormBuilder) {}
-
-//  ngOnInit(): void {
-//    this.contactForm = this.formBuilder.group(
-//      {
-//        fromName: ['', Validators.required],
-//        fromEmail: ['', [Validators.required, Validators.email]],
-//        subject: ['', Validators.required],
-//        emailBody: ['', Validators.required],
-//      }
-//    );
-//  }
-
-//  get f(): { [key: string]: AbstractControl } {
-//    return this.contactForm.controls;
-//  }
-
-//  onSubmit(f: any): void {
-//    this.submitted = true;
-
-//    if (this.contactForm.invalid) {
-//      return;
-//    }
-
-//    console.log(JSON.stringify(this.contactForm.value, null, 2));
-//  }
-
-//  onReset(): void {
-//    this.submitted = false;
-//    this.contactForm.reset();
-//  }
-
-//  //onSubmit(email: any) {
-
-//  //  this.emailSettings = email.value as EmailSettings;
-//  //  this.emailSettings.ToEmail = "postmaster@remoteservicesllc.com";
-
-//  //  const httpOptions = {
-//  //    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-//  //  }
-
-//  //  this.http.post<boolean>(this.baseUrl + 'email/send', email.value, httpOptions).subscribe(result => {
-//  //  }, error => console.error(error));
-//  //}
-//}
 
 export class ContactComponent implements OnInit {
   form: FormGroup = new FormGroup({
@@ -128,14 +70,14 @@ export class ContactComponent implements OnInit {
         this.contactSuccess = true;
         setTimeout(() => {
           this.contactSuccess = false;
-        }, 2000);
+        }, 3000);
       }
 
     }, error => {
       this.contactFailed = true;
       setTimeout(() => {
         this.contactFailed = false;
-      }, 2000);
+      }, 3000);
     });
   }
 
