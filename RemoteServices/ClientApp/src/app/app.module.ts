@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -10,6 +10,9 @@ import { CounterComponent } from './counter/counter.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
+import { SpinnerComponent } from './spinner/spinner.component';
+import { LoadingInterceptor } from './loading.interceptor';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import { LifeCycleComponent } from './life-cycle/life-cycle.component';
     CounterComponent,
     ContactComponent,
     AboutComponent,
-    LifeCycleComponent
+    LifeCycleComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -29,11 +33,12 @@ import { LifeCycleComponent } from './life-cycle/life-cycle.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'contact', component: ContactComponent },
-     // { path: 'about', component: AboutComponent },
       { path: 'life-cycle', component: LifeCycleComponent }
     ])
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

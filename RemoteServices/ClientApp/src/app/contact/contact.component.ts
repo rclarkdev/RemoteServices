@@ -4,6 +4,7 @@ import { EmailSettings } from '../Types/email-settings';
 import { FormBuilder, FormGroup, Validators, AbstractControl, FormControl } from '@angular/forms';
 
 import Validation from '../utils/validation';
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-contact',
@@ -125,9 +126,17 @@ export class ContactComponent implements OnInit {
       if (result == true) {
         this.onReset();
         this.contactSuccess = true;
+        setTimeout(() => {
+          this.contactSuccess = false;
+        }, 2000);
       }
 
-    }, error => this.contactFailed = true);
+    }, error => {
+      this.contactFailed = true;
+      setTimeout(() => {
+        this.contactFailed = false;
+      }, 2000);
+    });
   }
 
   onReset(): void {
